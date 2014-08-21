@@ -1,0 +1,21 @@
+;; (ns csp.core
+;;   (:require [cljs.core.async :as async
+;;              :refer [chan go >! <! <!! timeout pub sub]]))
+
+;; (def c (chan))
+;; (def ^:dynamic value 10)
+
+;; (binding [value 20]
+;;   (println value)
+
+;;   (go
+;;    (set! value 21)
+;;    (let [v (<! c)]
+;;      (println "c1" v))))
+;; (go
+;;  (<! (timeout 1000))
+;;  (>! c 5))
+
+(println "starting")
+;(<!! (go (<! (timeout 10000))))
+
