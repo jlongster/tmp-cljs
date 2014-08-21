@@ -1,8 +1,9 @@
-(ns csp.core)
+(ns csp.core
+  (:require [cljs.nodejs :as nodejs]))
 
-(enable-console-print!)
+(nodejs/enable-util-print!)
 
 (defn -main []
-  (. js/console (log "foo!")))
+  (println "Hello world!"))
 
 (set! *main-cli-fn* -main)
